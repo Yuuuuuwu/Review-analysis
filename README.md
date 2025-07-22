@@ -46,7 +46,7 @@
    
 2. 建立 `.env` 檔案，填入 OpenRouter 金鑰：
    
-   OPENROUTER_API_KEY=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
+   OPENROUTER_API_KEY=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
    (這是我註冊的API)
    
 4. 確認已安裝 Google Chrome，`webdriver_manager` 會自動處理 chromedriver。
