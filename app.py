@@ -14,13 +14,21 @@ from markupsafe import escape, Markup
 from dotenv import load_dotenv
 from openai import OpenAI, OpenAIError   # 注意這裡改成從 openai import OpenAI
 
-load_dotenv()
+# 明確指定 .env 檔案路徑
+load_dotenv(dotenv_path='.env')
+print(f"[Debug] Current working directory: {os.getcwd()}")
+print(f"[Debug] .env file exists: {os.path.exists('.env')}")
+
 app = Flask(__name__)
 
 # 在程式一開始就建立好 OpenRouter client
+api_key = os.getenv("OPENROUTER_API_KEY")
+print(f"[Debug] API Key loaded: {'Yes' if api_key else 'No'}")
+print(f"[Debug] API Key starts with: {api_key[:10] + '...' if api_key else 'None'}")
+
 router_client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
-    api_key=os.getenv("OPENROUTER_API_KEY")
+    api_key=api_key
 )
 
 
