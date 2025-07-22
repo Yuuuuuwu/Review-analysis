@@ -68,7 +68,7 @@ google-chrome --version
    
    python app.py
    
-2. 瀏覽器開啟 [http://localhost:5000]
+2. 瀏覽器開啟 (http://127.0.0.1:5001)
 3. 輸入 Google Maps 店家網址與選擇年份區間（相差一年）
 4. 查看評論列表、星等分佈、關鍵字統計
 5. 可進一步向 AI 提問，獲取智能評論分析
